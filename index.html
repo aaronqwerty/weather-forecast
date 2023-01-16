@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link   rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
+        <link   rel="stylesheet"
+                href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+                integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+                crossorigin="anonymous"/>
+        <link   href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+                rel="stylesheet"/>
+        <script
+        src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+        crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css"/>
+        <link rel="stylesheet" href="./assets/css/aaron.css"/>
+        <title>Weather Forecast</title>
+    </head>
+
+    <body>
+        
+        <div class="form-check form-switch form-check-reverse">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+            <label class="form-check-label" for="flexSwitchCheckReverse">C/F</label>
+        </div>
+        <header>
+            <h1 id="mainHeading">5 Day Weather Forecast</h1>
+        </header>
+
+        <div class="container-fluid text-center">
+            <div class="row">
+             
+              <div class="col-2">
+                <aside>
+                              
+                    
+                    <h4 class="col-12">Search for a city</h4>
+                    
+                    <input id="cityInput" class="col-10" type="text">
+
+                    <button id="citySearch" class="col-10"><i class="fa-brands fa-searchengin"></i></button> <!--Search-->
+                    <!--<button id="locationSearch" class="col-2"><i class="fa-solid fa-location-pin"></i></i></button> <!--Location-->
+                    <!--<button id="deleteSaved" class="col-2"><i class="fa-solid fa-trash"></i></i></button> <!--Delete Saved Locations-->
+                    
+                    <div>&nbsp;</div>
+
+                    <section id="results-history">
+                        <div class="search-buttons"></div>
+                        <button id="trash-icon"><i class="fas fa-trash"></i></button>
+                    </section>
+        
+                </aside>
+              </div>
+              
+              <div id="hidden" class="col-10">
+                <div class="row">
+                  <div class="col-12">
+                    <container id="today" class="text-left">           
+                        
+                        <h4 class="card-title">Today</h4>
+                        <h6 class="card-title" id="date1Day"></h6>
+                        <img id="date1Icon" class="icon" src="" alt="Weather">
+                        <div class="card-body">
+                        <p id="date1Temp" class="card-text temp" title="Temprature">Temprature:</p>
+                        <p id="date1Wind" class="card-text humid">Wind Speed:</p>
+                        <p id="date1Humid"class="card-text wind">Humidity:</p>                       
+                        </div>
+                    </container>
+                  </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-3 card">
+                        <card> 
+                            <h4 class="card-title">Tomorrow</h4>
+                            <!-- <h5 class="card-title" id="date2Day"></h5> -->
+                            <img id="date2Icon" class="icon" src="" alt="Weather">
+                            <div class="card-body">
+                            <p id="date2Temp" class="card-text temp" title="Temprature">Temprature:</p>
+                            <p id="date2Wind" class="card-text humid">Wind Speed:</p>
+                            <p id="date2Humid"class="card-text wind">Humidity:</p>
+                            </div>
+                        </card>
+                    </div>
+                    <div class="col-3 card">
+                        <card> 
+                            <h4 class="card-title" id="date3Day">Day 3</h4>
+                            <img id="date3Icon" class="icon" src="" alt="Weather">
+                            <div class="card-body">
+                            <p id="date3Temp" class="card-text temp" title="Temprature">Temprature:</p>
+                            <p id="date3Wind" class="card-text humid">Wind Speed:</p>
+                            <p id="date3Humid"class="card-text wind">Humidity:</p>
+                            </div>
+                        </card>
+                    </div>
+                    <div class="col-2 card">
+                        <card> 
+                            <h4 class="card-title" id="date4Day">Day 4</h4>
+                            <img id="date4Icon" class="icon" src="" alt="Weather">
+                            <div class="card-body">
+                            <p id="date4Temp" class="card-text temp" title="Temprature">Temprature:</p>
+                            <p id="date4Wind" class="card-text humid">Wind Speed:</p>
+                            <p id="date4Humid"class="card-text wind">Humidity:</p>
+                            </div>
+                        </card>
+                    </div>
+                    <div class="col-2 card">
+                        <card> 
+                            <h4 class="card-title" id="date5Day">Day 5</h4>
+                            <img id="date5Icon" class="icon" src="" alt="Weather">
+                            <div class="card-body">
+                            <p id="date5Temp" class="card-text temp" title="Temprature">Temprature:</p>
+                            <p id="date5Wind" class="card-text humid">Wind Speed:</p>
+                            <p id="date5Humid"class="card-text wind">Humidity:</p>
+                            </div>
+                        </card>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+
+    
+
+       
+
+        <main>
+            
+            
+            
+            
+            
+           
+            
+        </main>
+
+  <!--AARON CORNER MODAL-->
+
+    <section class="aaron">
+        <img id="aaron-image" src="./assets/images/Aaron.png" alt="Cartoon image of Aaron Raikes">
+        <span class="aarontext">Thanks for checking out my 5 Day Weather Forecast. I hope you found it useful.
+        </span>
+    </section>  
+
+<!--SCRIPT-->
+
+    <script src="./assets/js/script.js"></script>
+
+    </body>
+
+</html>

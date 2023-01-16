@@ -1,0 +1,75 @@
+
+
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 200px;
+    min-height: 50px;
+    background-color: darkgrey;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+
+.form-check {
+    position: absolute;
+    right: 0;
+    padding: 5px;
+  }
+
+#trash-icon {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: white;
+}
+
+button i {
+    width: -10px;
+}
+
+input {
+    padding: 1%;
+    margin-bottom: 5px
+}
+
+.card {
+    padding: 1%;
+    border-style: none;
+}
+
+
+#hidden {
+    visibility: hidden;
+}
+
+#visible {
+    visibility: visible;
+}
+
+
+#flexSwitchCheckReverse:checked {
+
+      background-color: grey;
+      border-color: grey;
+}
+
+#flexSwitchCheckReverse:focus {
+
+    color: yellow;
+}
+
+.icon {
+    filter: grayscale(100%);
+}
+
+.data-name-btn {
+    border: none;
+    background-color: white;
+}
+
+.data-name-btn:hover {
+    border: none;
+    background-color: lightgrey;
+}
