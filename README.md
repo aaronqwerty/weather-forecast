@@ -1,32 +1,35 @@
-# week-06-homework
+# Weather Forecast (Week-06-homework)
 
-## Your Task
+## Live Website
 
-Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+The website can be accessed via either of these two URLs;
 
-Use the [5 Day Weather Forecast](https://openweathermap.org/forecast5) to retrieve weather data for cities. The base URL should look like the following: `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}`. After registering for a new API key, you may need to wait up to 2 hours for that API key to activate.
+- https://aaronqwerty.github.io/weather-forecast
+- http://weather.raikes.com.au/index.html
 
-**Hint**: Using the 5 Day Weather Forecast API, you'll notice that you will need to pass in coordinates instead of just a city name. Using the OpenWeatherMap APIs, how could we retrieve geographical coordinates given a city name?
 
-You will use `localStorage` to store any persistent data. For more information on how to work with the OpenWeather API, refer to the [Full-Stack Blog on how to use API keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys).
+## Description
 
-## User Story
+Week six homework required me to create a weather app which will show the current weather for a city and the expected weather for the next 4 days. The website should store the cities which have been searched so they can be clicked on and searched again.
 
-```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
+This project includes;
 
-## Acceptance Criteria
+- html
+- JavaScript
+- CSS
 
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
+For this project I had to do a lot of reverse engineering and googling to better understand what we had learned this week, since there was a lot. The Web API's were exciting to learn as they started to add 'magic' to our website.
+
+I to make the app more fun, I have added a small rainbow in the bottom right corner (when the screen is larger than 840px), clicking on this well enable/disable a color from the rainbow. I also added the option for users to select if they would like their weather discplayed in metric (celcius) or imperial (fahrenheit).
+
+## Installation
+
+There are no steps to install this project, simply open the deployed website and enjoy.
+
+## Usage
+
+The webpage should resize automatically based on the screen size.
+
+## Screenshot
+
+![Screenshot of App](./assets/images/screenshot.png "Weather Forecast")
