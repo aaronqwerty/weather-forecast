@@ -135,47 +135,47 @@ function getWeather() {
 
 //Title
 
-mainHeading.innerHTML = "5 Day Weather Forecast - " + data.city.name + ", " + data.city.country
+mainHeading.innerHTML = "5 Day Midday Forecast - " + data.city.name + ", " + data.city.country
 
 //day 1
-            var icona = data.list[3].weather[0].icon;
+            var icona = data.list[0].weather[0].icon;
               icon1.src = `http://openweathermap.org/img/wn/${icona}@2x.png`;
-            date1.innerHTML = "(" + dayjs(data.list[3].dt_txt).format('dddd, DD MMMM YYYY') + ")";
-            temp1.innerHTML = "Temp: " + data.list[3].main.temp + weatherDeg;
-            humid1.innerHTML = "Humidity: " + data.list[3].main.humidity + "%";
-            wind1.innerHTML = "Wind Speed: " + data.list[3].wind.speed + speedType;
+            date1.innerHTML = "(" + dayjs(data.list[0].dt_txt).format('dddd, DD MMMM YYYY') + ")";
+            temp1.innerHTML = "Temp: " + data.list[0].main.temp + weatherDeg;
+            humid1.innerHTML = "Humidity: " + data.list[0].main.humidity + "%";
+            wind1.innerHTML = "Wind Speed: " + data.list[0].wind.speed + speedType;
  
 //day 2
-var iconb = data.list[11].weather[0].icon;
+var iconb = data.list[8].weather[0].icon;
 icon2.src = `http://openweathermap.org/img/wn/${iconb}@2x.png`;
 //date2.innerHTML = dayjs(data.list[11].dt_txt).format('dddd');
-temp2.innerHTML = "Temp: " + data.list[11].main.temp + weatherDeg;
-humid2.innerHTML = "Humidity: " + data.list[11].main.humidity + "%";
-wind2.innerHTML = "Wind Speed: " + data.list[11].wind.speed + speedType;
+temp2.innerHTML = "Temp: " + data.list[8].main.temp + weatherDeg;
+humid2.innerHTML = "Humidity: " + data.list[8].main.humidity + "%";
+wind2.innerHTML = "Wind Speed: " + data.list[8].wind.speed + speedType;
 
 //day 3
-var iconc = data.list[19].weather[0].icon;
+var iconc = data.list[16].weather[0].icon;
 icon3.src = `http://openweathermap.org/img/wn/${iconc}@2x.png`;
-date3.innerHTML = dayjs(data.list[19].dt_txt).format('dddd');
-temp3.innerHTML = "Temp: " + data.list[19].main.temp + weatherDeg;
-humid3.innerHTML = "Humidity: " + data.list[19].main.humidity + "%";
-wind3.innerHTML = "Wind Speed: " + data.list[19].wind.speed + speedType;
+date3.innerHTML = dayjs(data.list[16].dt_txt).format('dddd');
+temp3.innerHTML = "Temp: " + data.list[16].main.temp + weatherDeg;
+humid3.innerHTML = "Humidity: " + data.list[16].main.humidity + "%";
+wind3.innerHTML = "Wind Speed: " + data.list[16].wind.speed + speedType;
 
 //day 4
-var icond = data.list[27].weather[0].icon;
+var icond = data.list[24].weather[0].icon;
 icon4.src = `http://openweathermap.org/img/wn/${icond}@2x.png`;
-date4.innerHTML = dayjs(data.list[27].dt_txt).format('dddd');
-temp4.innerHTML = "Temp: " + data.list[27].main.temp + weatherDeg;
-humid4.innerHTML = "Humidity: " + data.list[27].main.humidity + "%";
-wind4.innerHTML = "Wind Speed: " + data.list[27].wind.speed + speedType;
+date4.innerHTML = dayjs(data.list[24].dt_txt).format('dddd');
+temp4.innerHTML = "Temp: " + data.list[24].main.temp + weatherDeg;
+humid4.innerHTML = "Humidity: " + data.list[24].main.humidity + "%";
+wind4.innerHTML = "Wind Speed: " + data.list[24].wind.speed + speedType;
 
 //day 5
-var icone = data.list[35].weather[0].icon;
+var icone = data.list[32].weather[0].icon;
 icon5.src = `http://openweathermap.org/img/wn/${icone}@2x.png`;
-date5.innerHTML = dayjs(data.list[35].dt_txt).format('dddd');
-temp5.innerHTML = "Temp: " + data.list[35].main.temp + weatherDeg;
-humid5.innerHTML = "Humidity: " + data.list[35].main.humidity + "%";
-wind5.innerHTML = "Wind Speed: " + data.list[35].wind.speed + speedType;
+date5.innerHTML = dayjs(data.list[32].dt_txt).format('dddd');
+temp5.innerHTML = "Temp: " + data.list[32].main.temp + weatherDeg;
+humid5.innerHTML = "Humidity: " + data.list[32].main.humidity + "%";
+wind5.innerHTML = "Wind Speed: " + data.list[32].wind.speed + speedType;
 
 
         });
@@ -223,12 +223,56 @@ function updateTemp () {
 }
 
 
+var rainbowColor = document.getElementById("rainbow");
+var currentRainbow = "grey"
 
 
+rainbowColor.addEventListener("click",changeRainbow);
+
+function changeRainbow() {
+
+
+if (currentRainbow === "grey") {
+  var colors = ['#ff3333', '#ff6633', '#ff9933', '#ffcc33', '#ffff33', '#ccff33', '#99ff33', '#66ff33', '#33ff33', '#33ff66', '#33ff99', '#33ffcc', '#33ffff', '#33ccff', '#3399ff', '#3366ff', '#3333ff', '#6633ff', '#9933ff', '#cc33ff', '#ff33ff', '#ff33cc', '#ff3399', '#ff3366'];
+  var random_color = colors[Math.floor(Math.random() * colors.length)];
+  document.getElementById('header').style.backgroundColor = random_color;
+  document.getElementById('mainHeading').style.color = '#ffffff';
+  document.getElementById('cftemp').style.color = '#ffffff';
+  document.getElementById('aaron-image').style.filter = 'none';
+  
+  document.getElementById('date1Icon').style.filter = 'none';
+  document.getElementById('date2Icon').style.filter = 'none';
+  document.getElementById('date3Icon').style.filter = 'none';
+  document.getElementById('date4Icon').style.filter = 'none';
+  document.getElementById('date5Icon').style.filter = 'none';
+  document.getElementById('rainbow').style.color = random_color;
+
+  currentRainbow = "rainbow"
+  console.log(random_color);
+} else {
+  document.getElementById('header').style.backgroundColor = '#999999';
+  document.getElementById('mainHeading').style.color = '#000000';
+  document.getElementById('cftemp').style.color = '#000000';
+  document.getElementById('aaron-image').style.filter = 'grayscale(100%)';
+
+  document.getElementById('date1Icon').style.filter = 'grayscale(100%)';
+  document.getElementById('date2Icon').style.filter = 'grayscale(100%)';
+  document.getElementById('date3Icon').style.filter = 'grayscale(100%)';
+  document.getElementById('date4Icon').style.filter = 'grayscale(100%)';
+  document.getElementById('date5Icon').style.filter = 'grayscale(100%)';
+
+  document.getElementById('rainbow').style.color = '#999999';
+
+  currentRainbow = "grey"
+  console.log(currentRainbow);
+}
+
+
+}
 
 // Dynamically create buttons for previous searches
 var searchButtons = document.querySelector('.search-buttons');
-var searchHeader = document.createElement('h6');
+var searchHeader = document.createElement('h5');
 var trashBtn = document.querySelector('.fa-trash');
 
 function createButtons (){

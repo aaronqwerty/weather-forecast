@@ -25,19 +25,22 @@
 
     <body>
         
+        <div>
         <div class="form-check form-switch form-check-reverse">
             <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
-            <label class="form-check-label" for="flexSwitchCheckReverse">C/F</label>
+            <label id="cftemp" class="form-check-label" for="flexSwitchCheckReverse">C/F</label>
+            
         </div>
-        <header>
-            <h1 id="mainHeading">5 Day Weather Forecast</h1>
+        <button id="rainbow"><i class="fas fa-rainbow"></i></button>
+        </div>
+        <header id="header">
+            <h1 id="mainHeading">5 Day Midday Forecast</h1>
         </header>
 
-        <div class="container-fluid text-center">
+        <div class="text-center">
             <div class="row">
              
-              <div class="col-2">
-                <aside>
+              <aside class="col-2">
                               
                     
                     <h4 class="col-12">Search for a city</h4>
@@ -45,9 +48,8 @@
                     <input id="cityInput" class="col-10" type="text">
 
                     <button id="citySearch" class="col-10"><i class="fa-brands fa-searchengin"></i></button> <!--Search-->
-                    <!--<button id="locationSearch" class="col-2"><i class="fa-solid fa-location-pin"></i></i></button> <!--Location-->
-                    <!--<button id="deleteSaved" class="col-2"><i class="fa-solid fa-trash"></i></i></button> <!--Delete Saved Locations-->
                     
+                    <div>&nbsp;</div>
                     <div>&nbsp;</div>
 
                     <section id="results-history">
@@ -56,7 +58,7 @@
                     </section>
         
                 </aside>
-              </div>
+             
               
               <div id="hidden" class="col-10">
                 <div class="row">
@@ -76,7 +78,7 @@
 
                 </div>
                 <div class="row">
-                    <div class="col-3 card">
+                    <div class="card">
                         <card> 
                             <h4 class="card-title">Tomorrow</h4>
                             <!-- <h5 class="card-title" id="date2Day"></h5> -->
@@ -88,7 +90,7 @@
                             </div>
                         </card>
                     </div>
-                    <div class="col-3 card">
+                    <div class="card">
                         <card> 
                             <h4 class="card-title" id="date3Day">Day 3</h4>
                             <img id="date3Icon" class="icon" src="" alt="Weather">
@@ -99,7 +101,7 @@
                             </div>
                         </card>
                     </div>
-                    <div class="col-2 card">
+                    <div class="card">
                         <card> 
                             <h4 class="card-title" id="date4Day">Day 4</h4>
                             <img id="date4Icon" class="icon" src="" alt="Weather">
@@ -110,7 +112,7 @@
                             </div>
                         </card>
                     </div>
-                    <div class="col-2 card">
+                    <div class="card">
                         <card> 
                             <h4 class="card-title" id="date5Day">Day 5</h4>
                             <img id="date5Icon" class="icon" src="" alt="Weather">
